@@ -1,0 +1,3 @@
+#!/system/bin/sh
+/opt/sbin/dinitctl stop flappy-bird || true
+/opt/sbin/dinitctl disable flappy-bird || true

@@ -12,7 +12,7 @@ Grab the .apk from releases, install and select from the main menu
 Yes, this is garbage and needs improvement.
 
 ### Editing Lua
-The sandbox's lua scripts are stored in `/opt/share/lua-sandbox/scripts/`
+Please find varying examples in the [scripts](scripts/) directory. Once installed as a package, sandbox's lua scripts are stored in `/opt/share/lua-sandbox/scripts/`.
 
 It is reccomended to create a new directory with an entry point of index.lua to add new scripts to the main menu. The provided default index.lua will pick them up automatically.
 
@@ -31,6 +31,9 @@ Make sure ANDROID_NDK_HOME is set, r23b is tested and known to be good. Then run
 ```
 ./start.sh
 ```
+
+This won't interfere with any package installations as everything is installed in /tmp. Since /tmp is an in-memory tmpfs this can affect your memory usage.
+
 ### Todo
 - Long press back to exit application
 - Figure out what to do with LVGL default input key logic (next/prev vs up/down/left/right)

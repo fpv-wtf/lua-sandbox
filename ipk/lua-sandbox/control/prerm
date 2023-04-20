@@ -1,0 +1,3 @@
+#!/system/bin/sh
+/opt/sbin/dinitctl -u stop lua-sandbox || true
+/opt/sbin/dinitctl -u disable lua-sandbox || true

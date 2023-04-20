@@ -4,4 +4,4 @@
 /ipk-build
 /flappy-build
 /ipk/*/ipk/
-
+/ipk/*.ipk
