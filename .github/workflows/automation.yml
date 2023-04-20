@@ -62,6 +62,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
       - name: Get GitHub Build Number (ENV)
         id: get_buildno
