@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Debug Server</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <img id="snapshot" src="/png">
+	<script>
+        var snapshot = document.getElementById("snapshot");
+        var reload=function(){
+            setTimeout(function() {
+                snapshot.src="/png?" + new Date().getTime();
+            }, 500);
+            
+        }
+        if (snapshot.complete) {
+            reload();
+        }
+        snapshot.addEventListener('load', reload);
+        snapshot.addEventListener('error', reload);
+        
+    </script>
+  </body>
+</html>

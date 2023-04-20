@@ -1,0 +1,5 @@
+Package: lua-sandbox
+Version: 0.0.1
+Maintainer: Joonas Trussmann <joonas@batman.ee>
+Description: This is a Lua sandbox with LVGL for the DJI FPV Goggles
+Architecture: pigeon-glasses

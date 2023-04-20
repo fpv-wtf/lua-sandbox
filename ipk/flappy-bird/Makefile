@@ -1,0 +1,24 @@
+NAME = $(shell cat ./control/control | grep Package | cut -d" " -f2)
+ARCH = $(shell cat ./control/control | grep Architecture | cut -d" " -f2)
+VERSION = $(shell cat ./control/control | grep Version | cut -d" " -f2)
+IPK_NAME = "${NAME}_${VERSION}_${ARCH}.ipk"
+
+all:
+
+	mkdir -p ipk
+	echo "2.0" > ipk/debian-binary
+	cp -r data ipk/
+	cp -r control ipk/
+
+	mkdir -p ipk/data/opt/bin/
+	install ../../flappy-build/lua-sandbox ipk/data/opt/bin/flappy-bird
+	mkdir -p ipk/data/opt/share/flappy-bird/scripts/
+	cp -r ../../debug_server/htdocs ipk/data/opt/share/flappy-bird/
+	cp -r ../../scripts/flappy-bird/* ipk/data/opt/share/flappy-bird/scripts/
+
+	cd ipk/control && tar czvf ../control.tar.gz .
+	cd ipk/data && tar czvf ../data.tar.gz .
+	cd ipk/ && tar czvf "../../${IPK_NAME}" ./control.tar.gz ./data.tar.gz ./debian-binary
+
+clean:
+	rm -rf ipk

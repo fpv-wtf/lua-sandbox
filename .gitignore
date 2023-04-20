@@ -1,0 +1,7 @@
+.vscode
+
+/build
+/ipk-build
+/flappy-build
+/ipk/*/ipk/
+

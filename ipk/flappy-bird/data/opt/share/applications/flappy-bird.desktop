@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/opt/sbin/dinitctl start flappy-bird
+Name=Flappy Bird
+Icon=/opt/share/applications/flappy-bird.png
+Icon_Active=/opt/share/applications/flappy-bird.png

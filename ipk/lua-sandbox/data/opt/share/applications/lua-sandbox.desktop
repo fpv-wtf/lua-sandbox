@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/opt/sbin/dinitctl start lua-sandbox
+Name=Lua Sandbox
+Icon=/opt/share/applications/lua-sandbox.png
+Icon_Active=/opt/share/applications/lua-sandbox.png

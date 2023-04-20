@@ -1,0 +1,5 @@
+Package: flappy-bird
+Version: 0.0.1
+Maintainer: Joonas Trussmann <joonas@batman.ee>
+Description: This is Flappy Bird
+Architecture: pigeon-glasses

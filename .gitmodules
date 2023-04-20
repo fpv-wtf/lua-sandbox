@@ -1,0 +1,9 @@
+[submodule "deps/luavgl"]
+	path = deps/luavgl
+	url = https://github.com/XuNeo/luavgl.git
+[submodule "deps/Lua"]
+	path = deps/Lua
+	url = https://github.com/walterschell/Lua.git
+[submodule "deps/EmbeddableWebServer"]
+	path = deps/EmbeddableWebServer
+	url = https://github.com/hellerf/EmbeddableWebServer.git
